@@ -16,7 +16,7 @@ int main() {
   }
 
   auto dbus_msg =
-    ::dbus_message_new_method_call("org.freedesktop.DBus", "/", "org.freedesktop.DBus.Introspectable", "Introspect");
+    ::dbus_message_new_method_call("org.bluez", "/org/bluez/hci0/dev_FF_57_53_15_5E_4E", "org.freedesktop.DBus.Introspectable", "Introspect");
   if(not dbus_msg) {
     ::dbus_connection_unref(dbus_conn);
     throw std::runtime_error{dbus_error.message};
