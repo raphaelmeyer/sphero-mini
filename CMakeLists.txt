@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 project(SpheroMini VERSION 0.0.1)
 
 find_package(PkgConfig)
-pkg_check_modules(DBUS dbus-glib-1)
+pkg_check_modules(DBUS dbus-1)
 
 add_executable(sm
   main.cc
